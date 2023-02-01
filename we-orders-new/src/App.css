@@ -1,0 +1,152 @@
+#root{
+  height: 100vh;
+}
+
+.App{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.logo-login{
+  border-radius: 50%;
+  width: 40%;
+  display: block;
+  margin: auto;
+}
+
+
+.products{
+  margin-top: 2rem;
+  height: 80vh;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.products::-webkit-scrollbar {
+  width: 10px;
+}
+
+.products::-webkit-scrollbar-track {
+  background-color: rgb(228, 248, 255);
+  border-radius: 5px;
+}
+
+.products::-webkit-scrollbar-thumb {
+  width:10px;
+  height:30px;
+  background: rgb(78, 78, 78);
+  border-radius: 5px;
+  
+}
+
+.products-selected{
+  max-height: 75vh;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.products-selected::-webkit-scrollbar {
+  width: 10px;
+}
+
+.products-selected::-webkit-scrollbar-track {
+  background-color: rgb(228, 248, 255);
+  border-radius: 5px;
+}
+
+.products-selected::-webkit-scrollbar-thumb {
+  width:10px;
+  height:30px;
+  background: rgb(78, 78, 78);
+  border-radius: 5px;
+  
+}
+
+.bg-selected{
+  background-color: rgba(140, 160, 214, 0.466);
+}
+
+.product-item{
+  cursor: pointer;
+}
+
+.product-item:hover{
+  background-color: rgba(112, 139, 214, 0.788);
+}
+
+.min-height{
+  height: 50vh;
+}
+
+.delete-item{
+  cursor: pointer;
+  color: darkred;
+}
+
+.delete-item:hover{
+  transform: scale(1.2);
+  color: rgb(243, 107, 107);
+}
+
+.number-input{
+  width: 5rem;
+}
+
+.react-autosuggest__container {
+  width: 70vw;
+  margin-left: 30vw;
+  margin-top: 5vh;
+}
+
+.react-autosuggest__input {
+  width: 40vw;
+  height: 50px;
+  padding: 10px 20px;
+  font-weight: 400;
+  font-size: 16px;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 4px;
+}
+
+.react-autosuggest__input--focused {
+  outline: none;
+}
+
+.react-autosuggest__input--open {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.react-autosuggest__suggestions-container {
+  display: none;
+}
+
+.react-autosuggest__suggestions-container--open {
+  display: block;
+  position: absolute;
+  top: 78px;
+  width: 40vw;
+  border: 2px solid rgb(150, 150, 150);
+  background-color: #fff;
+  font-weight: 400;
+  font-size: 16px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  z-index: 2;
+}
+
+.react-autosuggest__suggestions-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.react-autosuggest__suggestion {
+  cursor: pointer;
+  padding: 10px 20px;
+}
+
+.react-autosuggest__suggestion--highlighted {
+  background-color: rgba(112, 139, 214, 0.788);
+}
