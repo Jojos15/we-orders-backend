@@ -21,13 +21,13 @@ const ProductList = (props) => {
                 let table = data.data;
                 let prods = [];
                 for (let i = 0; i < table.length; i++) {
+                    table[i] = {...table[i], "comments": ""}
                     for (let j = 0; j < table[i].products.length; j++) {
                         table[i].products[j] = { ...table[i].products[j], "quantity": -1 }
                         prods.push(table[i].products[j]);
                     }
                 }
                 if (props.previousState) {
-                    //console.log(props.previousState);
                     setCompanies(JSON.parse(localStorage.getItem("companies")));
                 }
                 else setCompanies(table);
@@ -43,7 +43,6 @@ const ProductList = (props) => {
 
     useEffect(() => {
         if (companies.length>0) {
-            console.log(companies);
             localStorage.setItem("companies", JSON.stringify(companies));
         }
     }, [companies]);
