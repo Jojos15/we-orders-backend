@@ -1,19 +1,24 @@
 const express = require('express');
 const app = express();
 const nodemailer = require("nodemailer");
-const fs = require('fs');
+const path = require('path');
 const fsAs = require('fs').promises;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(express.static(path.join(__dirname, 'we-orders-new/build')));
 
 app.get('/api', (req, res) => {
   res.send('Hello World!');
 });
 
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname + '/we-orders-new/build/index.html'))
+});
+
 app.post('/api/mail', async (req, res) => {
 
-  /* let testAccount = await nodemailer.createTestAccount();
+  let testAccount = await nodemailer.createTestAccount();
 
   // create reusable transporter object using the default SMTP transport
   let transporter = nodemailer.createTransport({
@@ -26,7 +31,7 @@ app.post('/api/mail', async (req, res) => {
     },
   });
 
-  let mailToSent = await generateMail(req.params.companies);
+  let mailToSent = await generateMail(req.body.companies);
 
   // send mail with defined transport object
   let info = await transporter.sendMail({
@@ -43,14 +48,14 @@ app.post('/api/mail', async (req, res) => {
   // Preview only available when sending through an Ethereal account
   console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
 
-  res.status(200).send({"message": "Success!"}); */
+  res.status(200).send({"message": "Success!"});
 
-  console.log(req.body);
+  /* console.log(req.body);
   let output = await generateMail(req.body.companies);
   fs.writeFile('output.html', output, (err) => {
     if (err) throw err;
   })
-  res.status(200).send({ "message": "Success!" });
+  res.status(200).send({ "message": "Success!" }); */
 });
 
 async function generateMail(companies) {

@@ -110,7 +110,7 @@ const Send = (props) => {
     }
     if(ok){
         return (
-            <img className="" src={Checkmark} alt="" />
+            <img className="success" src={Checkmark} alt="" />
         );
     }
     return (

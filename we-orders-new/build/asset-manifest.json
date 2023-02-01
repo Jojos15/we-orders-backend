@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.39b4bba5.css",
+    "main.js": "/static/js/main.c8822e41.js",
+    "static/js/787.38566ee4.chunk.js": "/static/js/787.38566ee4.chunk.js",
+    "static/media/welogo.svg": "/static/media/welogo.62e18f7c3f6daab30843f04e0347b86f.svg",
+    "index.html": "/index.html",
+    "static/media/checkmark.svg": "/static/media/checkmark.811a046ee360e05216b987e4e4f0bd13.svg",
+    "main.39b4bba5.css.map": "/static/css/main.39b4bba5.css.map",
+    "main.c8822e41.js.map": "/static/js/main.c8822e41.js.map",
+    "787.38566ee4.chunk.js.map": "/static/js/787.38566ee4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.39b4bba5.css",
+    "static/js/main.c8822e41.js"
+  ]
+}
