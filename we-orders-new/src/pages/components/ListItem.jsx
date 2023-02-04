@@ -10,7 +10,7 @@ const ListItem = (props) => {
     }
 
     return (
-        <li className={`list-group-item d-flex justify-content-between align-items-start product-item ${props.quantity !== -1 ? "bg-selected" : ""}`} onClick={handleClick}>
+        <li className={`list-group-item d-flex justify-content-between align-items-start product-item ms-3 ${props.quantity !== -1 ? "bg-selected" : ""}`} onClick={handleClick}>
             <div className="ms-2 me-auto">
                 <div className="fw-bold">{props.name}</div>
                 {props.id}

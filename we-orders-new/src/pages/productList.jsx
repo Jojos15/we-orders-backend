@@ -77,14 +77,14 @@ const ProductList = (props) => {
     }
 
     return (
-        <div className="row w-100">
+        <div className="row w-100 bg-dark h-100">
             <Search products={searchProducts} onItemSelected={onSearchItemSelected} />
-            <div className="col-5 products">
-                <ol className="list-group ms-3">
+            <div className="col-6 products">
+                <ol className="list-group ms-3 bg-black">
                     {companies.map((company, index) => {
                         return (
                             <span key={index}>
-                                <h2 className="ms-3 mt-4">{company.company}</h2>
+                                <h2 className="ms-3 mt-4 text-light">{company.company}</h2>
                                 {company.products.map((product) => {
                                     return (
                                         <ListItem
@@ -102,10 +102,9 @@ const ProductList = (props) => {
                     })}
                 </ol>
             </div>
-            <div className="col-1"></div>
-            <div className="col-6 mt-4">
-                <h2 className="text-center">Επιλεγμένα προιόντα</h2>
-                <div className="bg-light pb-4 pt-4 products-selected">
+            <div className="col-6">
+                <h2 className="bg-black text-center text-light pt-3 pb-3 rounded">Επιλεγμένα προιόντα</h2>
+                <div className="pb-4 pt-4 products-selected">
                     {companies.map((company, index) => {
                         return (
                             <ol key={index} className="list-group justify-content-center align-items-center">

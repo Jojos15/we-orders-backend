@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Home from './pages/home.jsx';
+import Home from './pages/login.jsx';
 import Main from './pages/main.jsx';
 
 function App() {

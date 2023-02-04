@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import logo from '../img/welogo.svg';
 import { useNavigate } from 'react-router-dom';
 
-const Home = () => {
+const LogIn = () => {
 
     let navigate = useNavigate();
     const [password, setPassword] = useState("");
@@ -36,4 +36,4 @@ const Home = () => {
     );
 }
 
-export default Home;
+export default LogIn;

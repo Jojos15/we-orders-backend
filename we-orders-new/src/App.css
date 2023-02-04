@@ -1,14 +1,14 @@
-#root{
+#root {
   height: 100vh;
 }
 
-.App{
+.App {
   margin: 0;
   padding: 0;
   height: 100%;
 }
 
-.logo-login{
+.logo-login {
   border-radius: 50%;
   width: 50%;
   display: block;
@@ -16,80 +16,51 @@
 }
 
 
-.products{
-  margin-top: 2rem;
+.products {
   height: 80vh;
   overflow: scroll;
-  overflow-x: hidden;
 }
 
 .products::-webkit-scrollbar {
-  width: 10px;
+  display: none;
 }
 
-.products::-webkit-scrollbar-track {
-  background-color: rgb(228, 248, 255);
-  border-radius: 5px;
-}
-
-.products::-webkit-scrollbar-thumb {
-  width:10px;
-  height:30px;
-  background: rgb(78, 78, 78);
-  border-radius: 5px;
-  
-}
-
-.products-selected{
+.products-selected {
   max-height: 75vh;
   overflow: scroll;
-  overflow-x: hidden;
 }
 
 .products-selected::-webkit-scrollbar {
-  width: 10px;
+  display: none;
 }
 
-.products-selected::-webkit-scrollbar-track {
-  background-color: rgb(228, 248, 255);
-  border-radius: 5px;
-}
-
-.products-selected::-webkit-scrollbar-thumb {
-  width:10px;
-  height:30px;
-  background: rgb(78, 78, 78);
-  border-radius: 5px;
-  
-}
-
-.bg-selected{
+.bg-selected {
   background-color: rgba(140, 160, 214, 0.466);
 }
 
-.product-item{
+.product-item {
   cursor: pointer;
 }
 
-.product-item:hover{
+.product-item:hover {
   background-color: rgba(112, 139, 214, 0.788);
 }
 
-.min-height{
+.min-height {
   height: 50vh;
 }
 
-.delete-item{
+.delete-item {
   cursor: pointer;
   color: darkred;
 }
 
-.delete-item:hover{
+.delete-item:hover {
   transform: scale(1.2);
   color: rgb(243, 107, 107);
 }
 
-.number-input{
+.number-input {
   width: 5rem;
 }
 
@@ -151,12 +122,12 @@
   background-color: rgba(112, 139, 214, 0.788);
 }
 
-.orders{
+.orders {
   margin-top: 2rem;
   height: 80vh;
 }
 
-.success{
+.success {
   height: 100vh;
   width: 100vw;
 }
