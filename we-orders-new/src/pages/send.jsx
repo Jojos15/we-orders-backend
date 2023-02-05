@@ -1,12 +1,12 @@
 import api from '../api/api';
 import { useEffect, useState } from 'react';
 import ListOrder from './components/ListOrder.jsx';
-import Checkmark from '../img/checkmark.svg'
+import {useNavigate} from 'react-router-dom';
 
 const Send = (props) => {
 
     const [orders, setOrders] = useState();
-    const [ok, setOk] = useState(false);
+    let navigate = useNavigate();
 
     const switchComponents = () => {
         props.switchComps();
@@ -57,7 +57,7 @@ const Send = (props) => {
             postMail(orders[index], index);
         }
         else {
-            setOk(true);
+            navigate('/success');
         }
     }
 
@@ -70,7 +70,7 @@ const Send = (props) => {
         setOrders(comp);
     }
 
-    if (orders && !ok) {
+    if (orders) {
         return (
             <div className="row h-100 w-100 bg-dark m-0">
                 <div className="col-12">
@@ -110,11 +110,6 @@ const Send = (props) => {
                     </div>
                 </div>
             </div>
-        );
-    }
-    if (ok) {
-        return (
-            <img className="success" src={Checkmark} alt="" />
         );
     }
     return (

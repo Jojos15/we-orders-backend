@@ -128,7 +128,6 @@
   height: 80vh;
 }
 
-.success {
-  height: 100vh;
-  width: 100vw;
+.success-logo {
+  width: 25vw;
 }
