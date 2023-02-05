@@ -45,7 +45,7 @@ const Send = (props) => {
             .then(response => {
                 if (response.status === 200) {
                     //console.log(index);
-                    sendMail(undefined, index+1);
+                    sendMail(undefined, index + 1);
                 }
             })
             .catch(e => console.log(e))
@@ -53,10 +53,10 @@ const Send = (props) => {
 
     const sendMail = (e, index) => {
         console.log(index);
-        if(orders.length>index){
+        if (orders.length > index) {
             postMail(orders[index], index);
         }
-        else{
+        else {
             setOk(true);
         }
     }
@@ -72,43 +72,47 @@ const Send = (props) => {
 
     if (orders && !ok) {
         return (
-            <div className="col-12 m-3">
-                <button type="button" className="btn btn-outline-primary" onClick={switchComponents}>⬅ Πίσω στα Προιόντα</button>
-                <div className="row justify-content-center">
-                    <div className="col-8 orders justify-conent-around">
-                        <ol className="list-group ms-3">
-                            {orders.map((company, index) => {
-                                return (
-                                    <span key={index}>
-                                        <h2 className="ms-3 mt-4">{company.company}</h2>
-                                        {company.products.map((product) => {
-                                            return (
-                                                <ListOrder
-                                                    name={product.name}
-                                                    id={product.id}
-                                                    quantity={product.quantity}
-                                                    key={product.id}
-                                                />
-                                            );
-                                        })}
+            <div className="row h-100 w-100 bg-dark m-0">
+                <div className="col-12">
+                    <button type="button" className="btn btn-outline-light mt-3" onClick={switchComponents}>⬅ Πίσω στα Προιόντα</button>
+                    <div className="row justify-content-center">
+                        <div className="col-8 orders justify-conent-around">
+                            <ol className="list-group ms-3 bg-black p-3">
+                                {orders.map((company, index) => {
+                                    return (
+                                        <span key={index}>
+                                            <h2 className="ms-3 mt-4 text-light">{company.company}</h2>
+                                            {company.products.map((product) => {
+                                                return (
+                                                    <ListOrder
+                                                        name={product.name}
+                                                        id={product.id}
+                                                        quantity={product.quantity}
+                                                        key={product.id}
+                                                    />
+                                                );
+                                            })}
 
-                                        <div className="mb-3 mt-2">
-                                            <label className="form-label">Σχόλια Πραγγελίας</label>
-                                            <textarea className="form-control" id="exampleFormControlTextarea1" rows="3" onChange={(e) => setCommends(e.target.value, company.company)}></textarea>
-                                        </div>
-                                    </span>
-                                );
-                            })}
-                        </ol>
-                        <div className="d-grid gap-2 mx-3 mb-3">
-                        <button className="btn btn-primary" type="button" onClick={(e) => {sendMail(e, 0)}}>Αποστολή</button>
+                                            <div className="mb-3 mt-2">
+                                                <label className="form-label text-light">Σχόλια Πραγγελίας</label>
+                                                <textarea className="form-control" id="exampleFormControlTextarea1" rows="3" onChange={(e) => setCommends(e.target.value, company.company)}></textarea>
+                                            </div>
+                                        </span>
+                                    );
+                                })}
+                            </ol>
+                            <div className=" row justify-content-center mt-4">
+                                <div className="d-grid mx-3 w-50">
+                                    <button className="btn btn-outline-light text-bold" type="button" onClick={(e) => { sendMail(e, 0) }}>Αποστολή</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         );
     }
-    if(ok){
+    if (ok) {
         return (
             <img className="success" src={Checkmark} alt="" />
         );
