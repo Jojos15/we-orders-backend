@@ -1,4 +1,5 @@
 import Checkmark from '../img/checkmark.svg'
+import 'animate.css';
 import {useNavigate} from 'react-router-dom';
 
 const Success = () => {
@@ -14,7 +15,7 @@ const Success = () => {
         <div className="row h-100 w-100 align-items-center justify-content-center bg-dark m-0">
             <h1 className="text-light text-center">Η Αποστολή Ολοκληρώθηκε</h1>s
             <div className="col-12 w-25 justify-content-center">
-                <img className="success-logo pe-3" src={Checkmark} alt="" />
+                <img className="animate__animated animate__bounceInUp success-logo pe-3" src={Checkmark} alt="" />
             </div>
             <div className=" row justify-content-center mt-4">
                 <div className="d-grid mx-3 w-50">
